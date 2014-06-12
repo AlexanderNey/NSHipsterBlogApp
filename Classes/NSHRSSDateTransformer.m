@@ -25,10 +25,8 @@
                             initWithLocaleIdentifier:@"en_US_POSIX"];
         [dateFormatter setLocale:locale];
         [dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss Z"];
-        sharedInstance = [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+        sharedInstance = [MTLValueTransformer transformerWithBlock:^(NSString *str) {
             return [dateFormatter dateFromString:str];
-        } reverseBlock:^(NSDate *date) {
-            return [dateFormatter stringFromDate:date];
         }];
     });
     

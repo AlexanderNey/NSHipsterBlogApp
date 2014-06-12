@@ -28,6 +28,8 @@
 		45B79774194A4B3000E8E68E /* sample_invalid.xml in Resources */ = {isa = PBXBuildFile; fileRef = 45B79773194A4B3000E8E68E /* sample_invalid.xml */; };
 		45B79778194A4B8400E8E68E /* NSString+RemoveHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */; };
 		45B7977B194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */; };
+		45B7977E194A55B800E8E68E /* NSHRSSDateTransformerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977C194A55B800E8E68E /* NSHRSSDateTransformerSpec.m */; };
+		45B7977F194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977D194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m */; };
 		678BA231BD4242D3A6473678 /* libPods-NSHipsterBlogApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */; };
 		7700FAC6CF9D48A586184DA3 /* libPods-NSHipsterBlogAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 108CC62DEFDE4DDDA9EC9BB1 /* libPods-NSHipsterBlogAppTests.a */; };
 /* End PBXBuildFile section */
@@ -78,6 +80,8 @@
 		45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RemoveHTML.m"; sourceTree = "<group>"; };
 		45B79779194A528600E8E68E /* NSHRSSStringSanitizingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSStringSanitizingTransformer.h; sourceTree = "<group>"; };
 		45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSStringSanitizingTransformer.m; sourceTree = "<group>"; };
+		45B7977C194A55B800E8E68E /* NSHRSSDateTransformerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSDateTransformerSpec.m; sourceTree = "<group>"; };
+		45B7977D194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSStringSanitizingTransformerSpec.m; sourceTree = "<group>"; };
 		90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSHipsterBlogApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FAEE691912415183750ECB /* Pods-NSHipsterBlogAppTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSHipsterBlogAppTests.xcconfig"; path = "Pods/Pods-NSHipsterBlogAppTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +178,8 @@
 				45B797631949F32A00E8E68E /* Resources */,
 				45B797401949B84D00E8E68E /* Supporting Files */,
 				45B7975E1949E83700E8E68E /* NSHRSSFeedSpec.m */,
+				45B7977C194A55B800E8E68E /* NSHRSSDateTransformerSpec.m */,
+				45B7977D194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m */,
 			);
 			path = NSHipsterBlogAppTests;
 			sourceTree = "<group>";
@@ -414,6 +420,8 @@
 				45B79778194A4B8400E8E68E /* NSString+RemoveHTML.m in Sources */,
 				45B7975F1949E83700E8E68E /* NSHRSSFeedSpec.m in Sources */,
 				45B797621949ECFD00E8E68E /* NSHRSSFeed.m in Sources */,
+				45B7977E194A55B800E8E68E /* NSHRSSDateTransformerSpec.m in Sources */,
+				45B7977F194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
