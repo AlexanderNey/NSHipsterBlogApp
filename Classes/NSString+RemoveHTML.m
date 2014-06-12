@@ -14,10 +14,10 @@
 - (NSString *) stringByStrippingHTML
 {
     NSRange range;
-    NSString *string = [self copy];
+    NSMutableString *string = [self mutableCopy];
     while ((range = [string rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
-        string = [string stringByReplacingCharactersInRange:range withString:@""];
-    return string;
+        [string replaceCharactersInRange:range withString:@""];
+    return [string copy];
 }
 
 @end

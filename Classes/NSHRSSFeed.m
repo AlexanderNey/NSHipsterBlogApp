@@ -20,17 +20,18 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:feedURL];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/rss+xml"];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSXMLParser *XMLParser = (NSXMLParser *)responseObject;
-        [XMLParser setShouldProcessNamespaces:YES];
-        
-        
+        NSError *parserError;
+        NSXMLParser *parser = (NSXMLParser *)responseObject;
+        //[XMLParser setShouldProcessNamespaces:YES];
+        NSHRSSFeed *feed = [self feedWithXMLParser:parser error:parserError];
         
         if (completion)
         {
-            completion(nil, nil);
+            completion(feed, parserError);
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -39,10 +40,8 @@
         {
             completion(nil, error);
         }
-        
-        
     }];
-
+    [operation start];
 }
 
 + (instancetype)feedWithXMLParser:(NSXMLParser *)parser error:(NSError *)error

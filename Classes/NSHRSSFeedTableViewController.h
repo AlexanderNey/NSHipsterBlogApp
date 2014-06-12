@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NSHFeedTableViewController : UITableViewController
+@interface NSHRSSFeedTableViewController : UITableViewController
 
 @end

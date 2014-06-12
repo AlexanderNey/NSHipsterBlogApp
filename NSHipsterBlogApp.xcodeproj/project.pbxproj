@@ -20,16 +20,17 @@
 		45B797441949B84D00E8E68E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45B797421949B84D00E8E68E /* InfoPlist.strings */; };
 		45B797521949C1FE00E8E68E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B797511949C1FE00E8E68E /* Main.storyboard */; };
 		45B7975F1949E83700E8E68E /* NSHRSSFeedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7975E1949E83700E8E68E /* NSHRSSFeedSpec.m */; };
-		45B797621949ECFD00E8E68E /* NSHRSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B797611949ECFD00E8E68E /* NSHRSSFeed.m */; };
 		45B797651949F32A00E8E68E /* sample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 45B797641949F32A00E8E68E /* sample.xml */; };
-		45B79769194A069100E8E68E /* NSHFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79768194A069100E8E68E /* NSHFeedTableViewController.m */; };
+		45B79769194A069100E8E68E /* NSHRSSFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79768194A069100E8E68E /* NSHRSSFeedTableViewController.m */; };
 		45B7976D194A274000E8E68E /* NSHRSSFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7976C194A274000E8E68E /* NSHRSSFeedItem.m */; };
 		45B79770194A481600E8E68E /* NSHRSSDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7976F194A481600E8E68E /* NSHRSSDateTransformer.m */; };
 		45B79774194A4B3000E8E68E /* sample_invalid.xml in Resources */ = {isa = PBXBuildFile; fileRef = 45B79773194A4B3000E8E68E /* sample_invalid.xml */; };
-		45B79778194A4B8400E8E68E /* NSString+RemoveHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */; };
 		45B7977B194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */; };
 		45B7977E194A55B800E8E68E /* NSHRSSDateTransformerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977C194A55B800E8E68E /* NSHRSSDateTransformerSpec.m */; };
 		45B7977F194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977D194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m */; };
+		45B79784194A644300E8E68E /* NSHRSSFeedItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79782194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.m */; };
+		45B79785194A64D900E8E68E /* NSString+RemoveHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */; };
+		45B79786194A64E500E8E68E /* NSHRSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B797611949ECFD00E8E68E /* NSHRSSFeed.m */; };
 		678BA231BD4242D3A6473678 /* libPods-NSHipsterBlogApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */; };
 		7700FAC6CF9D48A586184DA3 /* libPods-NSHipsterBlogAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 108CC62DEFDE4DDDA9EC9BB1 /* libPods-NSHipsterBlogAppTests.a */; };
 /* End PBXBuildFile section */
@@ -68,8 +69,8 @@
 		45B797611949ECFD00E8E68E /* NSHRSSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeed.m; sourceTree = "<group>"; };
 		45B797641949F32A00E8E68E /* sample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample.xml; sourceTree = "<group>"; };
 		45B797661949F66500E8E68E /* NSHRSSFeed_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeed_Private.h; sourceTree = "<group>"; };
-		45B79767194A069100E8E68E /* NSHFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHFeedTableViewController.h; sourceTree = "<group>"; };
-		45B79768194A069100E8E68E /* NSHFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHFeedTableViewController.m; sourceTree = "<group>"; };
+		45B79767194A069100E8E68E /* NSHRSSFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeedTableViewController.h; sourceTree = "<group>"; };
+		45B79768194A069100E8E68E /* NSHRSSFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeedTableViewController.m; sourceTree = "<group>"; };
 		45B7976B194A274000E8E68E /* NSHRSSFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeedItem.h; sourceTree = "<group>"; };
 		45B7976C194A274000E8E68E /* NSHRSSFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeedItem.m; sourceTree = "<group>"; };
 		45B7976E194A481600E8E68E /* NSHRSSDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSDateTransformer.h; sourceTree = "<group>"; };
@@ -82,6 +83,8 @@
 		45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSStringSanitizingTransformer.m; sourceTree = "<group>"; };
 		45B7977C194A55B800E8E68E /* NSHRSSDateTransformerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSDateTransformerSpec.m; sourceTree = "<group>"; };
 		45B7977D194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSStringSanitizingTransformerSpec.m; sourceTree = "<group>"; };
+		45B79781194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeedItemTableViewCell.h; sourceTree = "<group>"; };
+		45B79782194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeedItemTableViewCell.m; sourceTree = "<group>"; };
 		90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSHipsterBlogApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FAEE691912415183750ECB /* Pods-NSHipsterBlogAppTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSHipsterBlogAppTests.xcconfig"; path = "Pods/Pods-NSHipsterBlogAppTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				45B79775194A4B6500E8E68E /* Categories */,
+				45B79780194A62B100E8E68E /* View */,
 				45B797501949B8F600E8E68E /* Controller */,
 				45B7974F1949B8E100E8E68E /* Model */,
 				45B797261949B84D00E8E68E /* NSHAppDelegate.h */,
@@ -213,8 +217,8 @@
 		45B797501949B8F600E8E68E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				45B79767194A069100E8E68E /* NSHFeedTableViewController.h */,
-				45B79768194A069100E8E68E /* NSHFeedTableViewController.m */,
+				45B79767194A069100E8E68E /* NSHRSSFeedTableViewController.h */,
+				45B79768194A069100E8E68E /* NSHRSSFeedTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -235,6 +239,15 @@
 				45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		45B79780194A62B100E8E68E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45B79781194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.h */,
+				45B79782194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,10 +419,13 @@
 			files = (
 				45B797281949B84D00E8E68E /* NSHAppDelegate.m in Sources */,
 				45B79770194A481600E8E68E /* NSHRSSDateTransformer.m in Sources */,
-				45B79769194A069100E8E68E /* NSHFeedTableViewController.m in Sources */,
+				45B79784194A644300E8E68E /* NSHRSSFeedItemTableViewCell.m in Sources */,
+				45B79769194A069100E8E68E /* NSHRSSFeedTableViewController.m in Sources */,
 				45B7977B194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m in Sources */,
 				45B797241949B84D00E8E68E /* main.m in Sources */,
+				45B79785194A64D900E8E68E /* NSString+RemoveHTML.m in Sources */,
 				45B7976D194A274000E8E68E /* NSHRSSFeedItem.m in Sources */,
+				45B79786194A64E500E8E68E /* NSHRSSFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45B79778194A4B8400E8E68E /* NSString+RemoveHTML.m in Sources */,
 				45B7975F1949E83700E8E68E /* NSHRSSFeedSpec.m in Sources */,
-				45B797621949ECFD00E8E68E /* NSHRSSFeed.m in Sources */,
 				45B7977E194A55B800E8E68E /* NSHRSSDateTransformerSpec.m in Sources */,
 				45B7977F194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m in Sources */,
 			);
