@@ -2,7 +2,9 @@ platform :ios, "7.0"
 inhibit_all_warnings!
 
 target "NSHipsterBlogApp" do
-
+    pod 'AFNetworking', '~> 2.3.0'
+    pod 'XMLDictionary', '~> 1.4'
+    pod 'Mantle', '~> 1.5'
 end
 
 target "NSHipsterBlogAppTests" do

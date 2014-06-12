@@ -18,8 +18,17 @@
 		45B7973B1949B84D00E8E68E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B797171949B84D00E8E68E /* Foundation.framework */; };
 		45B7973C1949B84D00E8E68E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B7971B1949B84D00E8E68E /* UIKit.framework */; };
 		45B797441949B84D00E8E68E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45B797421949B84D00E8E68E /* InfoPlist.strings */; };
-		45B797461949B84D00E8E68E /* NSHipsterBlogAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B797451949B84D00E8E68E /* NSHipsterBlogAppTests.m */; };
 		45B797521949C1FE00E8E68E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B797511949C1FE00E8E68E /* Main.storyboard */; };
+		45B7975F1949E83700E8E68E /* NSHRSSFeedSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7975E1949E83700E8E68E /* NSHRSSFeedSpec.m */; };
+		45B797621949ECFD00E8E68E /* NSHRSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B797611949ECFD00E8E68E /* NSHRSSFeed.m */; };
+		45B797651949F32A00E8E68E /* sample.xml in Resources */ = {isa = PBXBuildFile; fileRef = 45B797641949F32A00E8E68E /* sample.xml */; };
+		45B79769194A069100E8E68E /* NSHFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79768194A069100E8E68E /* NSHFeedTableViewController.m */; };
+		45B7976D194A274000E8E68E /* NSHRSSFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7976C194A274000E8E68E /* NSHRSSFeedItem.m */; };
+		45B79770194A481600E8E68E /* NSHRSSDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7976F194A481600E8E68E /* NSHRSSDateTransformer.m */; };
+		45B79774194A4B3000E8E68E /* sample_invalid.xml in Resources */ = {isa = PBXBuildFile; fileRef = 45B79773194A4B3000E8E68E /* sample_invalid.xml */; };
+		45B79778194A4B8400E8E68E /* NSString+RemoveHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */; };
+		45B7977B194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */; };
+		678BA231BD4242D3A6473678 /* libPods-NSHipsterBlogApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */; };
 		7700FAC6CF9D48A586184DA3 /* libPods-NSHipsterBlogAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 108CC62DEFDE4DDDA9EC9BB1 /* libPods-NSHipsterBlogAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E7A75487AFB4704BB94AB14 /* Pods-NSHipsterBlogApp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSHipsterBlogApp.xcconfig"; path = "Pods/Pods-NSHipsterBlogApp.xcconfig"; sourceTree = "<group>"; };
 		108CC62DEFDE4DDDA9EC9BB1 /* libPods-NSHipsterBlogAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSHipsterBlogAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B797141949B84D00E8E68E /* NSHipsterBlogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSHipsterBlogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B797171949B84D00E8E68E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +60,25 @@
 		45B797391949B84D00E8E68E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		45B797411949B84D00E8E68E /* NSHipsterBlogAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSHipsterBlogAppTests-Info.plist"; sourceTree = "<group>"; };
 		45B797431949B84D00E8E68E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		45B797451949B84D00E8E68E /* NSHipsterBlogAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSHipsterBlogAppTests.m; sourceTree = "<group>"; };
 		45B797511949C1FE00E8E68E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		45B7975E1949E83700E8E68E /* NSHRSSFeedSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeedSpec.m; sourceTree = "<group>"; };
+		45B797601949ECFD00E8E68E /* NSHRSSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeed.h; sourceTree = "<group>"; };
+		45B797611949ECFD00E8E68E /* NSHRSSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeed.m; sourceTree = "<group>"; };
+		45B797641949F32A00E8E68E /* sample.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample.xml; sourceTree = "<group>"; };
+		45B797661949F66500E8E68E /* NSHRSSFeed_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeed_Private.h; sourceTree = "<group>"; };
+		45B79767194A069100E8E68E /* NSHFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHFeedTableViewController.h; sourceTree = "<group>"; };
+		45B79768194A069100E8E68E /* NSHFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHFeedTableViewController.m; sourceTree = "<group>"; };
+		45B7976B194A274000E8E68E /* NSHRSSFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeedItem.h; sourceTree = "<group>"; };
+		45B7976C194A274000E8E68E /* NSHRSSFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeedItem.m; sourceTree = "<group>"; };
+		45B7976E194A481600E8E68E /* NSHRSSDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSDateTransformer.h; sourceTree = "<group>"; };
+		45B7976F194A481600E8E68E /* NSHRSSDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSDateTransformer.m; sourceTree = "<group>"; };
+		45B79771194A49B000E8E68E /* NSHRSSFeedItem_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeedItem_Private.h; sourceTree = "<group>"; };
+		45B79773194A4B3000E8E68E /* sample_invalid.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_invalid.xml; sourceTree = "<group>"; };
+		45B79776194A4B8400E8E68E /* NSString+RemoveHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RemoveHTML.h"; sourceTree = "<group>"; };
+		45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RemoveHTML.m"; sourceTree = "<group>"; };
+		45B79779194A528600E8E68E /* NSHRSSStringSanitizingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSStringSanitizingTransformer.h; sourceTree = "<group>"; };
+		45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSStringSanitizingTransformer.m; sourceTree = "<group>"; };
+		90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSHipsterBlogApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FAEE691912415183750ECB /* Pods-NSHipsterBlogAppTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSHipsterBlogAppTests.xcconfig"; path = "Pods/Pods-NSHipsterBlogAppTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +90,7 @@
 				45B7971A1949B84D00E8E68E /* CoreGraphics.framework in Frameworks */,
 				45B7971C1949B84D00E8E68E /* UIKit.framework in Frameworks */,
 				45B797181949B84D00E8E68E /* Foundation.framework in Frameworks */,
+				678BA231BD4242D3A6473678 /* libPods-NSHipsterBlogApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +116,7 @@
 				45B797161949B84D00E8E68E /* Frameworks */,
 				45B797151949B84D00E8E68E /* Products */,
 				E2FAEE691912415183750ECB /* Pods-NSHipsterBlogAppTests.xcconfig */,
+				0E7A75487AFB4704BB94AB14 /* Pods-NSHipsterBlogApp.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +137,7 @@
 				45B7971B1949B84D00E8E68E /* UIKit.framework */,
 				45B797391949B84D00E8E68E /* XCTest.framework */,
 				108CC62DEFDE4DDDA9EC9BB1 /* libPods-NSHipsterBlogAppTests.a */,
+				90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +145,7 @@
 		45B7971D1949B84D00E8E68E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				45B79775194A4B6500E8E68E /* Categories */,
 				45B797501949B8F600E8E68E /* Controller */,
 				45B7974F1949B8E100E8E68E /* Model */,
 				45B797261949B84D00E8E68E /* NSHAppDelegate.h */,
@@ -140,8 +171,9 @@
 		45B7973F1949B84D00E8E68E /* NSHipsterBlogAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				45B797451949B84D00E8E68E /* NSHipsterBlogAppTests.m */,
+				45B797631949F32A00E8E68E /* Resources */,
 				45B797401949B84D00E8E68E /* Supporting Files */,
+				45B7975E1949E83700E8E68E /* NSHRSSFeedSpec.m */,
 			);
 			path = NSHipsterBlogAppTests;
 			sourceTree = "<group>";
@@ -158,6 +190,16 @@
 		45B7974F1949B8E100E8E68E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45B7976B194A274000E8E68E /* NSHRSSFeedItem.h */,
+				45B79771194A49B000E8E68E /* NSHRSSFeedItem_Private.h */,
+				45B7976C194A274000E8E68E /* NSHRSSFeedItem.m */,
+				45B797601949ECFD00E8E68E /* NSHRSSFeed.h */,
+				45B797661949F66500E8E68E /* NSHRSSFeed_Private.h */,
+				45B797611949ECFD00E8E68E /* NSHRSSFeed.m */,
+				45B7976E194A481600E8E68E /* NSHRSSDateTransformer.h */,
+				45B7976F194A481600E8E68E /* NSHRSSDateTransformer.m */,
+				45B79779194A528600E8E68E /* NSHRSSStringSanitizingTransformer.h */,
+				45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -165,8 +207,28 @@
 		45B797501949B8F600E8E68E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				45B79767194A069100E8E68E /* NSHFeedTableViewController.h */,
+				45B79768194A069100E8E68E /* NSHFeedTableViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		45B797631949F32A00E8E68E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45B79773194A4B3000E8E68E /* sample_invalid.xml */,
+				45B797641949F32A00E8E68E /* sample.xml */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		45B79775194A4B6500E8E68E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				45B79776194A4B8400E8E68E /* NSString+RemoveHTML.h */,
+				45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45B797491949B84D00E8E68E /* Build configuration list for PBXNativeTarget "NSHipsterBlogApp" */;
 			buildPhases = (
+				3B2B20C47A054FFEBD01AF11 /* Check Pods Manifest.lock */,
 				45B797101949B84D00E8E68E /* Sources */,
 				45B797111949B84D00E8E68E /* Frameworks */,
 				45B797121949B84D00E8E68E /* Resources */,
+				4E7E8242BD4E425B839EF72B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45B797441949B84D00E8E68E /* InfoPlist.strings in Resources */,
+				45B797651949F32A00E8E68E /* sample.xml in Resources */,
+				45B79774194A4B3000E8E68E /* sample_invalid.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +346,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-NSHipsterBlogAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3B2B20C47A054FFEBD01AF11 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		3FA4F12F655D44488D5CA8AC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +376,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		4E7E8242BD4E425B839EF72B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-NSHipsterBlogApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -303,7 +399,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				45B797281949B84D00E8E68E /* NSHAppDelegate.m in Sources */,
+				45B79770194A481600E8E68E /* NSHRSSDateTransformer.m in Sources */,
+				45B79769194A069100E8E68E /* NSHFeedTableViewController.m in Sources */,
+				45B7977B194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m in Sources */,
 				45B797241949B84D00E8E68E /* main.m in Sources */,
+				45B7976D194A274000E8E68E /* NSHRSSFeedItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45B797461949B84D00E8E68E /* NSHipsterBlogAppTests.m in Sources */,
+				45B79778194A4B8400E8E68E /* NSString+RemoveHTML.m in Sources */,
+				45B7975F1949E83700E8E68E /* NSHRSSFeedSpec.m in Sources */,
+				45B797621949ECFD00E8E68E /* NSHRSSFeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,30 +521,40 @@
 		};
 		45B7974A1949B84D00E8E68E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7A75487AFB4704BB94AB14 /* Pods-NSHipsterBlogApp.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSHipsterBlogApp/NSHipsterBlogApp-Prefix.pch";
-				INFOPLIST_FILE = "NSHipsterBlogApp/NSHipsterBlogApp-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/NSHipsterBlogApp-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INFOPLIST_FILE = "Classes/NSHipsterBlogApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_LDFLAGS = "-Wall";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		45B7974B1949B84D00E8E68E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7A75487AFB4704BB94AB14 /* Pods-NSHipsterBlogApp.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSHipsterBlogApp/NSHipsterBlogApp-Prefix.pch";
-				INFOPLIST_FILE = "NSHipsterBlogApp/NSHipsterBlogApp-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/NSHipsterBlogApp-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INFOPLIST_FILE = "Classes/NSHipsterBlogApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_LDFLAGS = "-Wall";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -458,7 +570,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSHipsterBlogApp/NSHipsterBlogApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "Classes/NSHipsterBlogApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -481,7 +593,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSHipsterBlogApp/NSHipsterBlogApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "Classes/NSHipsterBlogApp-Prefix.pch";
 				INFOPLIST_FILE = "NSHipsterBlogAppTests/NSHipsterBlogAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
