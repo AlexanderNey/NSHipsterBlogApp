@@ -17,7 +17,9 @@ static NSDictionary *_predefinedXMLEntities;
 {
     NSRange range;
     NSMutableString *string = [self mutableCopy];
-    while ((range = [string rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+    
+    // Due to performance reasons this has been limited to 64 characters!
+    while ((range = [string rangeOfString:@"<[^>]{1,64}>" options:NSRegularExpressionSearch]).location != NSNotFound)
     {
         [string replaceCharactersInRange:range withString:@""];
     }

@@ -13,6 +13,7 @@
 
 /**
  *  will return a string by removing all html tags e.g. <tag> and </tag> from the string
+ *  due to performance impliciation the maximum leght of the characters has been limited to 64!
  */
 - (NSString *) stringByStrippingHTML;
 
