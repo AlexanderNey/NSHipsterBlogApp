@@ -26,7 +26,7 @@
         sharedInstance = [MTLValueTransformer transformerWithBlock:^(NSString *str) {
             
             NSString *sanitizedString = [str stringByStrippingHTML];
-            sanitizedString = [sanitizedString stringByReplacingXMLUnicodeEntities];
+            sanitizedString = [sanitizedString stringByDecodingXMLUnicodeEntities];
             sanitizedString = [sanitizedString stringByReplacingPredefinedXMLEntities];
             sanitizedString = [sanitizedString stringByTrimmingCharactersInSet:
 [NSCharacterSet whitespaceCharacterSet]];

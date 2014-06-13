@@ -11,8 +11,19 @@
 
 @interface NSString (SanitizeHTML)
 
+/**
+ *  will return a string by removing all html tags e.g. <tag> and </tag> from the string
+ */
 - (NSString *) stringByStrippingHTML;
-- (NSString *)stringByReplacingXMLUnicodeEntities;
+
+/**
+ *  will return a string by decoding all unicode charancters  in the format of &#2031;
+ */
+- (NSString *)stringByDecodingXMLUnicodeEntities;
+
+/**
+ *  will return a string by decoding well known predefined xml entities e.g. &quot;
+ */
 - (NSString *)stringByReplacingPredefinedXMLEntities;
 
 @end

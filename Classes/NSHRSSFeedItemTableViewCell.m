@@ -12,7 +12,8 @@
 #import <NSDate+TimeAgo/NSDate+TimeAgo.h>
 
 
-static const NSInteger maxDescriptionCharacters = 255;
+// Defines the maximum string length of the feed description
+static const NSInteger NSHRSSFeedItemTableViewCellMaxDescriptionCharacters = 255;
 
 @interface NSHRSSFeedItemTableViewCell ()
 
@@ -30,7 +31,7 @@ static const NSInteger maxDescriptionCharacters = 255;
      publicationDate:(NSDate *)publicationDate
 {
     self.titleLabel.text = title;
-    self.descriptionLabel.text = [description substringToIndex:MIN(maxDescriptionCharacters, description.length)];
+    self.descriptionLabel.text = [description substringToIndex:MIN(NSHRSSFeedItemTableViewCellMaxDescriptionCharacters, description.length)];
     self.dateLabel.text = [publicationDate dateTimeAgo];
     [self.contentView setNeedsLayout];
 }

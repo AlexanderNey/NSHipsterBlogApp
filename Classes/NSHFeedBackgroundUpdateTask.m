@@ -20,14 +20,18 @@ static NSString *const NSHFeedBackgroundUpdateTaskLatestPublishDate = @"NSHFeedB
 
 @implementation NSHFeedBackgroundUpdateTask
 
-+ (void)setLatestPublicationSeenAt:(NSDate *)latestPublicationDate
++ (void)setLatestPublicationSeenAt:(NSDate *)publicationDate
 {
-    if (!latestPublicationDate) return; // Fail gracefully
+    if (!publicationDate) return; // Fail gracefully
     
     // Update publication date in user defaults
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    [standardDefaults setObject:latestPublicationDate forKey:NSHFeedBackgroundUpdateTaskLatestPublishDate];
-    [standardDefaults synchronize];
+    NSDate *latestPublicationSeenDate = [standardDefaults objectForKey:NSHFeedBackgroundUpdateTaskLatestPublishDate];
+    if (!latestPublicationSeenDate || [latestPublicationSeenDate compare:publicationDate] == NSOrderedAscending)
+    {
+        [standardDefaults setObject:publicationDate forKey:NSHFeedBackgroundUpdateTaskLatestPublishDate];
+        [standardDefaults synchronize];
+    }
 }
 
 + (void)fetchAndNotify:(NSHFeedBackgroundUpdateTaskCompletion)completion;
@@ -43,7 +47,7 @@ static NSString *const NSHFeedBackgroundUpdateTaskLatestPublishDate = @"NSHFeedB
             NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
             NSDate *latestPublicationSeenDate = [standardDefaults objectForKey:NSHFeedBackgroundUpdateTaskLatestPublishDate];
             
-            // If publishing date is later then the last saved one > schedule local notification
+            // If publication date is later then the last saved one > schedule local notification
             if (!latestPublicationSeenDate || [latestPublicationSeenDate compare:feed.publicationDate] == NSOrderedAscending)
             {
                 hasNewContent = YES;

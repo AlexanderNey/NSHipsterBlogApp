@@ -24,7 +24,7 @@ static NSDictionary *_predefinedXMLEntities;
     return [string copy];
 }
 
-- (NSString *)stringByReplacingXMLUnicodeEntities
+- (NSString *)stringByDecodingXMLUnicodeEntities
 {
     NSRange range;
     NSMutableString *string = [self mutableCopy];

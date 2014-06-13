@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NSHRSSWebViewController : UIViewController
+
+// the url of the feed article to be displayed
 @property (nonatomic, strong, readwrite) NSURL *articleURL;
+
 @end

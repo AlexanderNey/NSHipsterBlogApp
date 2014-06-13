@@ -21,28 +21,36 @@
 
 
 @interface NSHRSSFeedTableViewController ()
-@property (nonatomic, copy, readwrite) NSHRSSFeed *rssFeed;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *statusBarButtonItem;
-@property (strong, nonatomic) IBOutlet UIRefreshControl *refreshControll;
-@property (strong, nonatomic)  UIBarButtonItem *activityItem;
-@property (atomic, assign, readwrite, getter = isLoading) BOOL loading;
+
+@property (nonatomic, copy,     readwrite) NSHRSSFeed *rssFeed;
+@property (nonatomic, weak,     readwrite) IBOutlet UIBarButtonItem *statusBarButtonItem;
+@property (nonatomic, strong, readwrite) IBOutlet UIRefreshControl *refreshControll;
+@property (nonatomic, strong, readwrite) UIBarButtonItem *activityItem;
+@property (atomic,    assign, readwrite, getter = isLoading) BOOL loading;
+
 @end
 
 @implementation NSHRSSFeedTableViewController
 
+#pragma mark - View lLifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Assign the refresh control defined in the storyboard
     self.refreshControl = _refreshControll;
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-     if (!self.rssFeed)
-     {
-         [self p_updateFeed];
-     }
+    
+    // Initiate update in viewWillAppear because of additional animations
+    if (!self.rssFeed)
+    {
+        [self p_updateFeed];
+    }
     
     [self.navigationController setToolbarHidden:NO animated:YES];
 }
@@ -50,6 +58,10 @@
 
 #pragma mark - Model
 
+/**
+ *  updates the feed and reloads the table
+ *  loading state and errors will be displayed in the bottom bar
+ */
 - (IBAction)p_updateFeed
 {
     if (self.isLoading) return;
@@ -78,6 +90,11 @@
 
 #pragma mark - Properties
 
+/**
+ *  dynamic getter for the Activity item to be placed in the bottom bar
+ *
+ *  @return UIBarButtonItem
+ */
 - (UIBarButtonItem *)activityItem
 {
     if (!_activityItem)
@@ -92,6 +109,10 @@
 
 #pragma mark - UI Updates
 
+/**
+ *  transfers the Viewcontroller to a loading state
+ *  updates bottom bar text & activity + refresh control
+ */
 - (void)p_updateUIToLoadingState
 {
     [self.refreshControl beginRefreshing];
@@ -105,6 +126,13 @@
     [self setToolbarItems:items animated:YES];
 }
 
+/**
+ *  transfers the Viewcontroller to the state after updating the datamodel
+ *  on success the lates publication date will be displayed in the bottom bar
+ *  on failure it will be the message of the error
+ *
+ *  @param error NSError which occured during uploading the datamodel
+ */
 - (void)p_updateUIToLoadedStateWithError:(NSError *)error
 {
     NSMutableArray *items = [self.toolbarItems mutableCopy];
@@ -165,6 +193,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSHRSSFeedItem *feedItem = [[self.rssFeed items] objectAtIndex:indexPath.row];
     
+    // Set the article URL & Title to the viewcontroller
     if([segue.destinationViewController isKindOfClass:NSHRSSWebViewController.class])
     {
         NSHRSSWebViewController *webViewController = (NSHRSSWebViewController *)segue.destinationViewController;

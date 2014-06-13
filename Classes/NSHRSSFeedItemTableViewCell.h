@@ -11,6 +11,13 @@
 
 @interface NSHRSSFeedItemTableViewCell : UITableViewCell
 
+/**
+ *  feeds the cell with the displayale data and updates its layout constraints
+ *
+ *  @param title           title of the feed item
+ *  @param description     description of the feed item
+ *  @param publicationDate the publication date of the feed item
+ */
 - (void)displayTitle:(NSString *)title
          description:(NSString *)description
      publicationDate:(NSDate *)publicationDate;

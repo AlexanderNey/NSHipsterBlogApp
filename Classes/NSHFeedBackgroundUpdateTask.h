@@ -13,7 +13,22 @@ typedef void (^NSHFeedBackgroundUpdateTaskCompletion)(BOOL hasNewContent, NSErro
 
 @interface NSHFeedBackgroundUpdateTask : NSObject
 
-+ (void)fetchAndNotify:(NSHFeedBackgroundUpdateTaskCompletion)compltion;
-+ (void)setLatestPublicationSeenAt:(NSDate *)latestPublicationDate;
+/**
+ *  will fetch the RSS feed and check if the publication date is later then the already sawn publichation
+ *  set by setLatestPublicationSeenAt:
+ *  if newer content was found a local push notification will be scheuled to inform the user
+ *  this should be executed within the context of a background fetch
+ *
+ *  @param compltion NSHFeedBackgroundUpdateTaskCompletion
+ */
++ (void)fetchAndNotify:(NSHFeedBackgroundUpdateTaskCompletion)completion;
+
+/**
+ *  set the date of the latest publication the user has seen
+ *  this should be called from the UI part of the app after the user saw / read the latest articels
+ *
+ *  @param latestPublicationDate NSDate
+ */
++ (void)setLatestPublicationSeenAt:(NSDate *)publicationDate;
 
 @end
