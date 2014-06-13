@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45B39414194B12BB0071679A /* NSHFeedBackgroundUpdateTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7978C194B0C7700E8E68E /* NSHFeedBackgroundUpdateTask.m */; };
 		45B797181949B84D00E8E68E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B797171949B84D00E8E68E /* Foundation.framework */; };
 		45B7971A1949B84D00E8E68E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B797191949B84D00E8E68E /* CoreGraphics.framework */; };
 		45B7971C1949B84D00E8E68E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B7971B1949B84D00E8E68E /* UIKit.framework */; };
@@ -88,6 +89,8 @@
 		45B79782194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeedItemTableViewCell.m; sourceTree = "<group>"; };
 		45B79787194A75AD00E8E68E /* NSHRSSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSWebViewController.h; sourceTree = "<group>"; };
 		45B79788194A75AD00E8E68E /* NSHRSSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSWebViewController.m; sourceTree = "<group>"; };
+		45B7978B194B0C7700E8E68E /* NSHFeedBackgroundUpdateTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHFeedBackgroundUpdateTask.h; sourceTree = "<group>"; };
+		45B7978C194B0C7700E8E68E /* NSHFeedBackgroundUpdateTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHFeedBackgroundUpdateTask.m; sourceTree = "<group>"; };
 		90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSHipsterBlogApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FAEE691912415183750ECB /* Pods-NSHipsterBlogAppTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSHipsterBlogAppTests.xcconfig"; path = "Pods/Pods-NSHipsterBlogAppTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +216,8 @@
 				45B7976F194A481600E8E68E /* NSHRSSDateTransformer.m */,
 				45B79779194A528600E8E68E /* NSHRSSStringSanitizingTransformer.h */,
 				45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */,
+				45B7978B194B0C7700E8E68E /* NSHFeedBackgroundUpdateTask.h */,
+				45B7978C194B0C7700E8E68E /* NSHFeedBackgroundUpdateTask.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,6 +312,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alexander Ney";
 				TargetAttributes = {
+					45B797131949B84D00E8E68E = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					45B797371949B84D00E8E68E = {
 						TestTargetID = 45B797131949B84D00E8E68E;
 					};
@@ -428,6 +440,7 @@
 				45B79784194A644300E8E68E /* NSHRSSFeedItemTableViewCell.m in Sources */,
 				45B79769194A069100E8E68E /* NSHRSSFeedTableViewController.m in Sources */,
 				45B7977B194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m in Sources */,
+				45B39414194B12BB0071679A /* NSHFeedBackgroundUpdateTask.m in Sources */,
 				45B797241949B84D00E8E68E /* main.m in Sources */,
 				45B79785194A64D900E8E68E /* NSString+SanitizeHTML.m in Sources */,
 				45B7976D194A274000E8E68E /* NSHRSSFeedItem.m in Sources */,

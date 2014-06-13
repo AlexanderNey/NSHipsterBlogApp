@@ -8,6 +8,7 @@
 
 #import "NSString+SanitizeHTML.h"
 
+
 static NSDictionary *_predefinedXMLEntities;
 
 @implementation NSString (SanitizeHTML)

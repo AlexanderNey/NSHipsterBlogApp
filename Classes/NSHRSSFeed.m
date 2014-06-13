@@ -12,6 +12,9 @@
 #import "NSHRSSFeed_Private.h"
 
 
+NSString *const NSHRSSFeedURLConfigurationKey = @"NSHFeedURL";
+
+
 @implementation NSHRSSFeed
 
 

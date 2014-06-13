@@ -11,15 +11,13 @@
 // Model
 #import "NSHRSSFeed.h"
 #import "NSHRSSFeedItem.h"
+#import "NSHFeedBackgroundUpdateTask.h"
 
 // View
 #import "NSHRSSFeedItemTableViewCell.h"
 
 // Controller
 #import "NSHRSSWebViewController.h"
-
-
-static NSString *const feedURLConfigurationKey = @"NSHFeedURL";
 
 
 @interface NSHRSSFeedTableViewController ()
@@ -56,7 +54,7 @@ static NSString *const feedURLConfigurationKey = @"NSHFeedURL";
 {
     if (self.isLoading) return;
     
-    NSURL *feedURL = [NSURL URLWithString:[[NSBundle mainBundle] objectForInfoDictionaryKey:feedURLConfigurationKey]];
+    NSURL *feedURL = [NSURL URLWithString:[[NSBundle mainBundle] objectForInfoDictionaryKey:NSHRSSFeedURLConfigurationKey]];
     
     [self p_updateUIToLoadingState];
     
@@ -68,6 +66,9 @@ static NSString *const feedURLConfigurationKey = @"NSHFeedURL";
            {
                self.rssFeed = feed;
                [self.tableView reloadData];
+               
+               // Update latest publication date
+               [NSHFeedBackgroundUpdateTask setLatestPublicationSeenAt:self.rssFeed.publicationDate];
            }
            
            [self p_updateUIToLoadedStateWithError:error];

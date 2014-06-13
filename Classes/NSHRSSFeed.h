@@ -11,6 +11,8 @@
 // Frameworks
 #import <Mantle/Mantle.h>
 
+FOUNDATION_EXPORT NSString *const NSHRSSFeedURLConfigurationKey;
+
 
 @class NSHRSSFeed;
 

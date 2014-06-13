@@ -8,7 +8,7 @@
 
 #import "NSHRSSFeedItemTableViewCell.h"
 
-//Extensions
+// Categories
 #import <NSDate+TimeAgo/NSDate+TimeAgo.h>
 
 
