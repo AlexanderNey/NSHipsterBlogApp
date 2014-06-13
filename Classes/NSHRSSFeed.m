@@ -27,15 +27,19 @@ NSString *const NSHRSSFeedURLConfigurationKey = @"NSHFeedURL";
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSError *parserError;
-        NSXMLParser *parser = (NSXMLParser *)responseObject;
-        //[XMLParser setShouldProcessNamespaces:YES];
-        NSHRSSFeed *feed = [self feedWithXMLParser:parser error:parserError];
-        
-        if (completion)
-        {
-            completion(feed, parserError);
-        }
+        dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(backgroundQueue, ^{
+            NSError *parserError;
+            NSXMLParser *parser = (NSXMLParser *)responseObject;
+            
+            NSHRSSFeed *feed = [self feedWithXMLParser:parser error:parserError];
+            
+            if (completion)
+            {
+                completion(feed, parserError);
+            }
+
+        });
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
