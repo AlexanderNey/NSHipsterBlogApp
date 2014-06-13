@@ -31,6 +31,7 @@
 		45B79784194A644300E8E68E /* NSHRSSFeedItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79782194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.m */; };
 		45B79785194A64D900E8E68E /* NSString+RemoveHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */; };
 		45B79786194A64E500E8E68E /* NSHRSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B797611949ECFD00E8E68E /* NSHRSSFeed.m */; };
+		45B7978A194A76DB00E8E68E /* NSHRSSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79788194A75AD00E8E68E /* NSHRSSWebViewController.m */; };
 		678BA231BD4242D3A6473678 /* libPods-NSHipsterBlogApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */; };
 		7700FAC6CF9D48A586184DA3 /* libPods-NSHipsterBlogAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 108CC62DEFDE4DDDA9EC9BB1 /* libPods-NSHipsterBlogAppTests.a */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,8 @@
 		45B7977D194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSStringSanitizingTransformerSpec.m; sourceTree = "<group>"; };
 		45B79781194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeedItemTableViewCell.h; sourceTree = "<group>"; };
 		45B79782194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSFeedItemTableViewCell.m; sourceTree = "<group>"; };
+		45B79787194A75AD00E8E68E /* NSHRSSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSWebViewController.h; sourceTree = "<group>"; };
+		45B79788194A75AD00E8E68E /* NSHRSSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSWebViewController.m; sourceTree = "<group>"; };
 		90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSHipsterBlogApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FAEE691912415183750ECB /* Pods-NSHipsterBlogAppTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSHipsterBlogAppTests.xcconfig"; path = "Pods/Pods-NSHipsterBlogAppTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +222,8 @@
 			children = (
 				45B79767194A069100E8E68E /* NSHRSSFeedTableViewController.h */,
 				45B79768194A069100E8E68E /* NSHRSSFeedTableViewController.m */,
+				45B79787194A75AD00E8E68E /* NSHRSSWebViewController.h */,
+				45B79788194A75AD00E8E68E /* NSHRSSWebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B7978A194A76DB00E8E68E /* NSHRSSWebViewController.m in Sources */,
 				45B797281949B84D00E8E68E /* NSHAppDelegate.m in Sources */,
 				45B79770194A481600E8E68E /* NSHRSSDateTransformer.m in Sources */,
 				45B79784194A644300E8E68E /* NSHRSSFeedItemTableViewCell.m in Sources */,

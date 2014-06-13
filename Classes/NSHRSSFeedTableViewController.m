@@ -15,12 +15,16 @@
 // View
 #import "NSHRSSFeedItemTableViewCell.h"
 
+// Controller
+#import "NSHRSSWebViewController.h"
+
 
 static NSString *const feedURLConfigurationKey = @"NSHFeedURL";
 
 
 @interface NSHRSSFeedTableViewController ()
 @property (nonatomic, copy, readwrite) NSHRSSFeed *rssFeed;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *statusBarButtonItem;
 @end
 
 @implementation NSHRSSFeedTableViewController
@@ -28,8 +32,17 @@ static NSString *const feedURLConfigurationKey = @"NSHFeedURL";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+     if (!self.rssFeed)
+     {
+         [self p_updateFeed];
+     }
     
-    [self p_updateFeed];
+    [self.navigationController setToolbarHidden:NO animated:YES];
 }
 
 
@@ -38,10 +51,32 @@ static NSString *const feedURLConfigurationKey = @"NSHFeedURL";
 - (void)p_updateFeed
 {
     NSURL *feedURL = [NSURL URLWithString:[[NSBundle mainBundle] objectForInfoDictionaryKey:feedURLConfigurationKey]];
+    
+    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [activityView startAnimating];
+    UIBarButtonItem *activityItem = [[UIBarButtonItem alloc] initWithCustomView:activityView];
+    NSMutableArray *items = [self.toolbarItems mutableCopy];
+    NSInteger statusTextIndex = [items indexOfObject:self.statusBarButtonItem];
+    NSAssert(statusTextIndex != NSNotFound, @"status text item not found in toolbar");
+    [items insertObject:activityItem atIndex:statusTextIndex ];
+    self.statusBarButtonItem.title = NSLocalizedString(@"Loading ...", nil);
+    
+    [self setToolbarItems:items animated:YES];
+    
     [NSHRSSFeed requestFeedFromURL:feedURL completion:^(NSHRSSFeed *feed, NSError *error) {
        dispatch_async(dispatch_get_main_queue(), ^{
            self.rssFeed = feed;
            [self.tableView reloadData];
+           
+           NSMutableArray *items = [self.toolbarItems mutableCopy];
+           [items removeObject:activityItem];
+           [self setToolbarItems:items animated:YES];
+           
+           NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+           dateFormatter.timeStyle = NSDateFormatterShortStyle;
+           dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+           NSString *title = [NSString stringWithFormat:NSLocalizedString(@"Published: %@", nil), [dateFormatter stringFromDate:self.rssFeed.publicationDate]];
+           self.statusBarButtonItem.title =  title;
        });
     }];
 }
@@ -77,10 +112,17 @@ static NSString *const feedURLConfigurationKey = @"NSHFeedURL";
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSHRSSFeedItemTableViewCell *)cell
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSHRSSFeedItem *feedItem = [[self.rssFeed items] objectAtIndex:indexPath.row];
+    
+    if([segue.destinationViewController isKindOfClass:NSHRSSWebViewController.class])
+    {
+        NSHRSSWebViewController *webViewController = (NSHRSSWebViewController *)segue.destinationViewController;
+        webViewController.articleURL = feedItem.url;
+        webViewController.title = feedItem.title;
+    }
 }
 
 

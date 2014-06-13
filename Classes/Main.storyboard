@@ -50,11 +50,14 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Nz7-Ds-sfm"/>
-                        <barButtonItem title="Item" style="plain" id="Lq2-At-pcb"/>
+                        <barButtonItem title="Item" style="plain" id="Lq2-At-pcb">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4dP-kh-rur"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="9ak-cy-vC8">
                         <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="C5W-S3-p51"/>
                         <view key="titleView" contentMode="scaleToFill" id="UUv-29-CbI">
                             <rect key="frame" x="96" y="6" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -67,15 +70,18 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="statusBarButtonItem" destination="Lq2-At-pcb" id="yML-hl-2r8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="un3-M6-8Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="268" y="127"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="Xef-8e-0za">
             <objects>
-                <viewController id="5kz-hW-DQJ" sceneMemberID="viewController">
+                <viewController id="5kz-hW-DQJ" customClass="NSHRSSWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yza-gC-MQk"/>
                         <viewControllerLayoutGuide type="bottom" id="1Zw-ll-Vr6"/>
@@ -88,15 +94,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5kz-hW-DQJ" id="dcR-aD-cGk"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Wuj-PC-Osc"/>
-                        <barButtonItem systemItem="action" id="TvK-oY-Ntk"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="FzW-Bb-r2L"/>
+                        <barButtonItem title="Item" style="plain" id="WiU-Pz-dg6">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ntg-Dc-pd7"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Rmm-ui-FQU"/>
+                    <connections>
+                        <outlet property="statusBarButtonItem" destination="WiU-Pz-dg6" id="ROQ-iJ-HS6"/>
+                        <outlet property="webView" destination="l3f-sL-KBE" id="ZG3-9Q-T0N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mkg-SX-xYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,10 +124,14 @@
                 <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="9DP-9f-X5s" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IOo-ys-97j">
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.97647064920000004" green="0.45490199329999997" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="asN-Kz-Ec5">
                         <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.97647064920000004" green="0.45490199329999997" blue="0.13333334029999999" alpha="1" colorSpace="deviceRGB"/>
                     </toolbar>
                     <connections>
                         <segue destination="LUd-EE-RTm" kind="relationship" relationship="rootViewController" id="Sph-XF-dhR"/>
