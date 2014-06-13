@@ -9,7 +9,7 @@
 #import "NSHRSSStringSanitizingTransformer.h"
 
 // Categories
-#import "NSString+RemoveHTML.h"
+#import "NSString+SanitizeHTML.h"
 
 // Frameworks
 #import <Mantle/Mantle.h>
@@ -26,6 +26,8 @@
         sharedInstance = [MTLValueTransformer transformerWithBlock:^(NSString *str) {
             
             NSString *sanitizedString = [str stringByStrippingHTML];
+            sanitizedString = [sanitizedString stringByReplacingXMLUnicodeEntities];
+            sanitizedString = [sanitizedString stringByReplacingPredefinedXMLEntities];
             sanitizedString = [sanitizedString stringByTrimmingCharactersInSet:
 [NSCharacterSet whitespaceCharacterSet]];
             

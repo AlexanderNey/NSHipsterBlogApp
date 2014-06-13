@@ -11,6 +11,8 @@
 
 @interface NSHRSSFeedItemTableViewCell : UITableViewCell
 
-- (void)displayTitle:(NSString *)title description:(NSString *)description;
+- (void)displayTitle:(NSString *)title
+         description:(NSString *)description
+     publicationDate:(NSDate *)publicationDate;
 
 @end

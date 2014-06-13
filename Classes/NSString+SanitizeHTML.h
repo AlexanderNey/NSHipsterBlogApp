@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSString (RemoveHTML)
+@interface NSString (SanitizeHTML)
 
 - (NSString *) stringByStrippingHTML;
+- (NSString *)stringByReplacingXMLUnicodeEntities;
+- (NSString *)stringByReplacingPredefinedXMLEntities;
 
 @end

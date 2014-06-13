@@ -29,7 +29,7 @@
 		45B7977E194A55B800E8E68E /* NSHRSSDateTransformerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977C194A55B800E8E68E /* NSHRSSDateTransformerSpec.m */; };
 		45B7977F194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B7977D194A55B800E8E68E /* NSHRSSStringSanitizingTransformerSpec.m */; };
 		45B79784194A644300E8E68E /* NSHRSSFeedItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79782194A62DB00E8E68E /* NSHRSSFeedItemTableViewCell.m */; };
-		45B79785194A64D900E8E68E /* NSString+RemoveHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */; };
+		45B79785194A64D900E8E68E /* NSString+SanitizeHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79777194A4B8400E8E68E /* NSString+SanitizeHTML.m */; };
 		45B79786194A64E500E8E68E /* NSHRSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B797611949ECFD00E8E68E /* NSHRSSFeed.m */; };
 		45B7978A194A76DB00E8E68E /* NSHRSSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B79788194A75AD00E8E68E /* NSHRSSWebViewController.m */; };
 		678BA231BD4242D3A6473678 /* libPods-NSHipsterBlogApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90384654DD20478890D6FD85 /* libPods-NSHipsterBlogApp.a */; };
@@ -78,8 +78,8 @@
 		45B7976F194A481600E8E68E /* NSHRSSDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSDateTransformer.m; sourceTree = "<group>"; };
 		45B79771194A49B000E8E68E /* NSHRSSFeedItem_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSFeedItem_Private.h; sourceTree = "<group>"; };
 		45B79773194A4B3000E8E68E /* sample_invalid.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_invalid.xml; sourceTree = "<group>"; };
-		45B79776194A4B8400E8E68E /* NSString+RemoveHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RemoveHTML.h"; sourceTree = "<group>"; };
-		45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RemoveHTML.m"; sourceTree = "<group>"; };
+		45B79776194A4B8400E8E68E /* NSString+SanitizeHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SanitizeHTML.h"; sourceTree = "<group>"; };
+		45B79777194A4B8400E8E68E /* NSString+SanitizeHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SanitizeHTML.m"; sourceTree = "<group>"; };
 		45B79779194A528600E8E68E /* NSHRSSStringSanitizingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHRSSStringSanitizingTransformer.h; sourceTree = "<group>"; };
 		45B7977A194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSStringSanitizingTransformer.m; sourceTree = "<group>"; };
 		45B7977C194A55B800E8E68E /* NSHRSSDateTransformerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHRSSDateTransformerSpec.m; sourceTree = "<group>"; };
@@ -240,8 +240,8 @@
 		45B79775194A4B6500E8E68E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				45B79776194A4B8400E8E68E /* NSString+RemoveHTML.h */,
-				45B79777194A4B8400E8E68E /* NSString+RemoveHTML.m */,
+				45B79776194A4B8400E8E68E /* NSString+SanitizeHTML.h */,
+				45B79777194A4B8400E8E68E /* NSString+SanitizeHTML.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -429,7 +429,7 @@
 				45B79769194A069100E8E68E /* NSHRSSFeedTableViewController.m in Sources */,
 				45B7977B194A528600E8E68E /* NSHRSSStringSanitizingTransformer.m in Sources */,
 				45B797241949B84D00E8E68E /* main.m in Sources */,
-				45B79785194A64D900E8E68E /* NSString+RemoveHTML.m in Sources */,
+				45B79785194A64D900E8E68E /* NSString+SanitizeHTML.m in Sources */,
 				45B7976D194A274000E8E68E /* NSHRSSFeedItem.m in Sources */,
 				45B79786194A64E500E8E68E /* NSHRSSFeed.m in Sources */,
 			);

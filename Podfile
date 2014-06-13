@@ -5,6 +5,7 @@ target "NSHipsterBlogApp" do
     pod 'AFNetworking', '~> 2.3.0'
     pod 'XMLDictionary', '~> 1.4'
     pod 'Mantle', '~> 1.5'
+    pod 'NSDate+TimeAgo', '~> 1.0.3'
 end
 
 target "NSHipsterBlogAppTests" do
